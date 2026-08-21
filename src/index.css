@@ -1,0 +1,100 @@
+:root {
+    color-scheme: light;
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 16px;
+    gap: 12px;
+}
+
+.vtable {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    overflow: hidden;
+    border: 1px solid #e3e6ea;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.vtable__head {
+    flex: none;
+    overflow-y: hidden;
+    scrollbar-gutter: stable;
+    border-bottom: 1px solid #e3e6ea;
+    background: #fbfcfd;
+    font-weight: 600;
+}
+
+.vtable__head-row {
+    display: flex;
+    width: 100%;
+}
+
+.vtable__body {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+}
+
+.vtable__canvas {
+    position: relative;
+    width: 100%;
+}
+
+.vtable__row {
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #e3e6ea;
+    cursor: pointer;
+}
+
+.vtable__row--positioned {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.vtable__cell {
+    flex: none;
+    padding: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.vtable__cell--flex {
+    flex: 1;
+}
+
+.vtable__row--selected {
+    background: #eaf1fe;
+}
+
+h1 small {
+    margin-left: 8px;
+    font-size: 14px;
+}
